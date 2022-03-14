@@ -1,0 +1,6 @@
+.GameStatusComponent{
+    box-sizing: border-box;
+    &>*:not(:last-child){
+        margin-bottom: 5px;
+    }
+}

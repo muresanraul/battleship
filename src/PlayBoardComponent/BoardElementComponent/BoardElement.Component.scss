@@ -1,0 +1,17 @@
+.BoardElementComponent {
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  border: 0.5px solid rgb(43, 43, 43);
+
+  & > img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &.status__clear {
+    cursor: pointer;
+    &:hover{
+      background-color: rgb(198, 232, 243);
+    }
+  }
+}

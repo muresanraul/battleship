@@ -1,0 +1,29 @@
+.SheepStatusComponent {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  
+  &__imgContainer {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+      max-height: 50px;
+    & > img {
+      height: auto;
+      width: 100%;
+      max-width: 200px;
+    }
+  }
+  &__hitsBox {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+  }
+  &__element {
+    display: flex;
+    width: 100%;
+    max-width: 20px;
+    height:auto;
+  }
+}

@@ -1,0 +1,13 @@
+.HitComponent {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  & > img {
+    display: flex;
+    width: 100%;
+    height: auto;
+  }
+  &.miss > img{
+    opacity: .2;
+  }
+}

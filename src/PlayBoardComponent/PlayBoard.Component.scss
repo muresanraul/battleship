@@ -1,0 +1,36 @@
+.PlayBoardComponent {
+  display: flex;
+  position: relative;
+  background-color: rgb(255, 255, 0);
+  box-sizing: border-box;
+  padding: 5px;
+
+
+  &__content_box {
+    display: flex;
+    position: relative;
+    width: 98%;
+    margin: 1%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    border: 2px solid rgb(255, 255, 0);
+  }
+  &__Element {
+    position: relative;
+
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+
+    & > * {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}

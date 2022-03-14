@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import GameComponent from './Game.Component';
+import GameComponent from './Game.Component.tsx';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
