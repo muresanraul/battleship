@@ -1,4 +1,3 @@
-import { size } from "lodash";
 import { GameLayoutBoardType, GameLayoutUnitStatus, GameLayoutUnitType, SheepStatusListType, ShipDataType, ShipPlacementsType, shipTypesType } from "../shared.types";
 
 export function generateLayoutArea(height: number, width: number): GameLayoutBoardType {
@@ -42,7 +41,6 @@ export function getUpdatedLayoutAreaData(indexCheck: number, layoutAreaData: Gam
 };
 
 export function getUpdatedStatusData(shipTypes: shipTypesType, shipPlacements_: ShipPlacementsType, layoutAreaData: GameLayoutBoardType): SheepStatusListType {
-  // debugger;
   let shipPlacements = [...shipPlacements_]
   const newSheepStatusList: SheepStatusListType = []
   const shipNames = Object.keys(shipTypes);

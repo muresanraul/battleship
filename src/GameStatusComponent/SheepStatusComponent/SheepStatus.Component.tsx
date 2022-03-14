@@ -1,12 +1,9 @@
 import './SheepStatus.Component.scss';
-
-
 import destroyer from './../../assets/destroyerShape.png'
 import battleship from './../../assets/battleshipShape.png'
 import carrier from './../../assets/carrierShape.png'
 import cruiser from './../../assets/cruiserShape.png'
 import submarine from './../../assets/submarineShape.png'
-
 import HitComponent from './HitComponent/Hit.Component';
 import { getHitsArr } from './SheepStatus.Service';
 import { SheepStatusItemType } from '../../shared.types';

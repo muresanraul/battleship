@@ -1,16 +1,15 @@
-import React, { useEffect, useReducer, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './Game.Component.scss';
 import PlayBoardComponent from './PlayBoardComponent/PlayBoard.Component';
 import GameStatusComponent from './GameStatusComponent/GameStatus.Component';
 import { gameData } from './services/data';
-import { GameLayoutBoardType, SheepStatusListType, ShipPlacementsType, shipTypesType } from './shared.types';
+import { GameLayoutBoardType, ShipPlacementsType, shipTypesType } from './shared.types';
 import { generateLayoutArea, checkTargetHit, getUpdatedLayoutAreaData, getUpdatedStatusData } from './services/service';
 import GameHeaderComponent from './GameHeaderComponent/GameHeader.Component';
 
 function GameComponent() {
   const [{ shipTypes, layout: shipPlacements }, setGameData]: [{ shipTypes: shipTypesType, layout: ShipPlacementsType }, Function] = useState({ shipTypes: {}, layout: [] });
   const [layoutAreaData, setLayoutAreaData]: [GameLayoutBoardType, Function] = useState([]);
-  const [shipStatusData, setShipStatusData]: [SheepStatusListType, Function] = useState([]);
 
   useEffect(() => {
     const shipPlacements = JSON.parse(gameData);
@@ -31,11 +30,8 @@ function GameComponent() {
     const layoutAreaData: GameLayoutBoardType = generateLayoutArea(10, 10);
     setLayoutAreaData(layoutAreaData);
   }
-  useEffect(() => {
-    const StatusData = getUpdatedStatusData(shipTypes, shipPlacements, layoutAreaData);
-    setShipStatusData(StatusData);
-  }, [shipTypes, shipPlacements, layoutAreaData]);
 
+  const shipStatusData = getUpdatedStatusData(shipTypes, shipPlacements, layoutAreaData);
   return (
     <div className="GameComponent">
       <GameHeaderComponent
